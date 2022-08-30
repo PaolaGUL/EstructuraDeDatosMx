@@ -2,8 +2,8 @@
 // Mostrar posicion en cada avance
 
 class Tortuga {
-    constructor(xi) {
-        this.xi = xi;
+    constructor() {
+        this.xi = 0;
     }
 
     get posicion() {
@@ -31,8 +31,8 @@ class Tortuga {
 }
 
 class Liebre {
-    constructor(xi) {
-        this.xi = xi;
+    constructor() {
+        this.xi = 0;
     }
 
     get posicion() {
@@ -61,14 +61,14 @@ class Liebre {
     }
 }
 
-const parti1 = new Tortuga(0);
+const parti1 = new Tortuga();
 
-const parti2 = new Liebre(0);
+const parti2 = new Liebre();
 
 if (parti1.posicion == parti2.posicion) {
     console.log("La posicion de la Tortuga es: " + parti1.posicion + " y la posicion de la Liebre es: " + parti2.posicion + "Empataron");
 } else if (parti1.posicion < parti2.posicion) {
-    console.log("La posicion de la Liebre es:" + parti2.posicion + ". Gano la Liebre");
+    console.log("La posicion de la Liebre es:" + parti1.posicion + ". Gano la Liebre");
 } else {
-    console.log("La posicion de la Tortuga es: " + parti1.posicion + ". Gano la Tortuga");
+    console.log("La posicion de la Tortuga es: " + parti2.posicion + ". Gano la Tortuga");
 }
