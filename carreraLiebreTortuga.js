@@ -7,7 +7,7 @@ class Tortuga {
     }
 
     get posicion() {
-        return calPosicionFinal();
+        return this.calPosicionFinal();
     }
 
     calPosicionFinal() {
@@ -36,7 +36,7 @@ class Liebre {
     }
 
     get posicion() {
-        return calPosicionFinal();
+        return this.calPosicionFinal();
     }
 
     calPosicionFinal() {
