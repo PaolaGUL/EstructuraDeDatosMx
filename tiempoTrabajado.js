@@ -6,13 +6,13 @@ let minE = 30;
 let segE = 20;
 
 let hrS = 16;
-let minS = 34;
+let minS = 00;
 let segS = 26;
 
 function Contar() {
-    var contarS = 0;
-    var contarM = 0;
-    var contarH = 0;
+    var contarS = 1;
+    var contarM = 1;
+    var contarH = 1;
     while (segE <= segS) {
         contarS += 1;
         segE += 1;
