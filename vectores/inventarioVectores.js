@@ -1,0 +1,1 @@
+// Parte del vector con el inventario
