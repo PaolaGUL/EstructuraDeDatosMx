@@ -12,3 +12,7 @@ producto[0] = document.getElementById('codigoP');
 producto[1] = document.getElementById('nombreP');
 producto[2] = document.getElementById('cantidadP');
 producto[3] = document.getElementById('costo');
+
+function agregar() {
+
+}
