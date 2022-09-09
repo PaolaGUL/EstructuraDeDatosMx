@@ -14,5 +14,5 @@ producto[0][2] = document.getElementById('cantidadP');
 producto[0][3] = document.getElementById('costo');
 
 function agregar() {
-    const form = document.createElement(form) // creando un elemento
+    const form = document.createElement('form') // creando un elemento
 }
