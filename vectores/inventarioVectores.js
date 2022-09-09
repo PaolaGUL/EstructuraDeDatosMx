@@ -8,10 +8,10 @@
 // declarando el array producto
 
 let producto = [];
-producto[0] = document.getElementById('codigoP');
-producto[1] = document.getElementById('nombreP');
-producto[2] = document.getElementById('cantidadP');
-producto[3] = document.getElementById('costo');
+producto[0][0] = document.getElementById('codigoP');
+producto[0][1] = document.getElementById('nombreP');
+producto[0][2] = document.getElementById('cantidadP');
+producto[0][3] = document.getElementById('costo');
 
 function agregar() {
 
