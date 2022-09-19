@@ -30,6 +30,7 @@
                 <label for="costo">Costo del Producto:</label>
                 <input type="text" id="costo" required><br>
                 <br>
+                <button type="submit" onclick="agregar()">Agregar</button>
 
                 <!-- <button type="submit" id="agregar"><a href="agregar.html">agregar</a></button>
                 <button type="submit" id="eliminar"><a href="eliminar.html">eliminar</a></button>
@@ -40,6 +41,23 @@
             </form>
             <br>
             <div>
+                <nav>
+                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                        <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Modificar</button>
+                        <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Eliminar</button>
+                        <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Mostrar Lista</button>
+                        <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Lista Inversa</button>
+                        <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Buscar</button>
+                    </div>
+                </nav>
+                <div class="tab-content" id="nav-tabContent">
+                    <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab" tabindex="0">...</div>
+                    <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">...</div>
+                    <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0">...</div>
+                </div>
+
+            </div>
+            <!-- <div>
                 <ul class="nav nav-tabs">
                     <li class="nav-item">
                         <button onclick="agregar()"><a class="nav-link" href="">Agregar</a></button>
@@ -67,7 +85,7 @@
                         Se ha agregado corectamente
                     </div>
                 </div>
-            </section>
+            </section> -->
         </div>
     </main>
 
