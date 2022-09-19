@@ -18,14 +18,26 @@ function agregar() {
     let i = document.getElementById('ingresar');
     i.parseInt();
     for (var c = 0; c <= i; i++) {
-        producto[c][0] = document.getElementById('codigoP');
-        producto[c][1] = document.getElementById('nombreP');
-        producto[c][2] = document.getElementById('cantidadP');
-        producto[c][3] = document.getElementById('costo');
+        producto[c][0] = document.getElementById('codigoP').value;
+        producto[c][1] = document.getElementById('nombreP').value;
+        producto[c][2] = document.getElementById('cantidadP').value;
+        producto[c][3] = document.getElementById('costo').value;
+
+        function buscarM() {
+            let prob = [];
+            prob[0][0] = document.getElementById('codigoPro').value;
+            let cont = 0;
+            while (cont <= i) {
+                if (producto[cont][0] == porb[0][0]) {
+                    function modificar() {
+                        producto[cont][1] = document.getElementById('nombrePro').value;
+                        producto[cont][2] = document.getElementById('cantidadPro').value;
+                        producto[cont][3] = document.getElementById('costoPro').value;
+                        document.writeln('Se ha modificado correctamente');
+                    }
+                }
+            }
+        }
     }
     return ('Se agrego correctamente');
-}
-
-function buscarM() {
-
 }

@@ -59,8 +59,20 @@
                         <form action="">
                             <p>Puede ingresar el código del producto</p><br>
                             <label for="codigoPro">Código Producto</label>
-                            <input type="text">
+                            <input type="text" id="codigoPro" required>
                             <button type="submit" onclick="buscarM()">Enviar</button>
+                        </form>
+                        <form action="">
+                            <label for="nombreP">Nombre del Producto:</label>
+                            <input type="text" id="nombrePro" required><br>
+                            <br>
+                            <label for="cantidadP">Cantidad de Producto:</label>
+                            <input type="text" id="cantidadPro" required><br>
+                            <br>
+                            <label for="costo">Costo del Producto:</label>
+                            <input type="text" id="costoPro" required><br>
+                            <br>
+                            <button type="submit" onclick="modifcar()">Agregar</button>
                         </form>
                     </div>
                     <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab" tabindex="0">...</div>
