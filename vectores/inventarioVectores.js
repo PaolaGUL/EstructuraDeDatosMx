@@ -23,5 +23,9 @@ function agregar() {
         producto[c][2] = document.getElementById('cantidadP');
         producto[c][3] = document.getElementById('costo');
     }
+    return ('Se agrego correctamente');
+}
+
+function buscarM() {
 
 }
