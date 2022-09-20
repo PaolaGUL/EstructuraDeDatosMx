@@ -41,3 +41,10 @@ function eliminar() {
         document.getElementById('demo2').innerHTML = "No se encontro el producto";
     }
 }
+
+function mostrar() {
+    var p = document.createElement('p');
+    p = document.write(producto[0] + ' ' + producto[1] + ' ' + producto[2] + ' ' + producto[3]);
+    p.appendChild();
+
+}
