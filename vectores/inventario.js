@@ -22,25 +22,43 @@ function agregar() {
 
 
     //document.getElementById('demo').innerHTML = "Se ha agregado correctamente";
-    document.write("Se ha agredado correctamente");
+    //document.write("Se ha agredado correctamente");
 }
-agregar.onclick = agregarPro;
+//agregar.onclick = agregarPro;
 
 function modificar() {
-    agregarPro();
-    let prob = [];
-    prob[0] = document.getElementById('codigoPro');
-    prob[0].parseInt();
-    producto[0].parseInt();
-    if (producto[0] == porb[0]) {
-        producto[1] = document.getElementById('nombrePro');
-        producto[2] = document.getElementById('cantidadPro');
-        producto[3] = document.getElementById('costoPro');
-        //verificar();
-        document.getElementById('demo2').innerHTML = "Se ha modificado correctamente";
-    } else {
-        document.getElementById('demo2').innerHTML = "No se encontro el producto";
+    let prob = document.getElementById('codigoPro').value;
+    if (codigo == prob) {
+        productos.push(prob);
+        let nombreb = document.getElementById('nombrePro').value;
+        //nombre = nombreb;
+        productos.push(nombreb);
+        let cantidadb = document.getElementById('cantidadPro').value;
+        //cantidad = cantidadb;
+        productos.push(cantidadb);
+        let costob = document.getElementById('costoPro').value;
+        //costo = costob;
+        productos.push(costob);
+
+        let salidaM = document.getElementById('salidaM');
+        salidaM.innerHTML = '';
+        let resultadoM = document.createElement('p');
+        resultadoM.innerText = 'Se ha modificado correctamente';
+
+        salidaM.appendChild(resultadoM);
     }
+    // prob[0] = document.getElementById('codigoPro');
+    // prob[0].parseInt();
+    // producto[0].parseInt();
+    // if (producto[0] == porb[0]) {
+    //     producto[1] = document.getElementById('nombrePro');
+    //     producto[2] = document.getElementById('cantidadPro');
+    //     producto[3] = document.getElementById('costoPro');
+    //     //verificar();
+    //     document.getElementById('demo2').innerHTML = "Se ha modificado correctamente";
+    // } else {
+    //     document.getElementById('demo2').innerHTML = "No se encontro el producto";
+    // }
 }
 
 function eliminar() {
