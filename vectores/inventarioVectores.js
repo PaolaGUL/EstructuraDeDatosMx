@@ -23,21 +23,26 @@ function agregar() {
         producto[c][2] = document.getElementById('cantidadP').value;
         producto[c][3] = document.getElementById('costo').value;
 
-        function buscarM() {
-            let prob = [];
-            prob[0][0] = document.getElementById('codigoPro').value;
-            let cont = 0;
-            while (cont <= i) {
-                if (producto[cont][0] == porb[0][0]) {
-                    function modificar() {
-                        producto[cont][1] = document.getElementById('nombrePro').value;
-                        producto[cont][2] = document.getElementById('cantidadPro').value;
-                        producto[cont][3] = document.getElementById('costoPro').value;
-                        document.writeln('Se ha modificado correctamente');
-                    }
+
+    }
+    document.getElementById('demo').innerHTML = "Se ha agregado correctamente";
+
+    function buscarM() {
+        let prob = [];
+        prob[0][0] = document.getElementById('codigoPro').value;
+        let cont = 0;
+        while (cont <= i) {
+            if (producto[cont][0] == porb[0][0]) {
+                function modificar() {
+                    producto[cont][1] = document.getElementById('nombrePro').value;
+                    producto[cont][2] = document.getElementById('cantidadPro').value;
+                    producto[cont][3] = document.getElementById('costoPro').value;
+                    document.writeln('Se ha modificado correctamente');
                 }
+            } else {
+                document.writeln('No se encontro el producto');
             }
         }
     }
-    return ('Se agrego correctamente');
+
 }
