@@ -32,10 +32,9 @@
                 <input type="text" id="cantidadP" required><br>
                 <br>
                 <label for="costo">Costo del Producto:</label>
-                <input type="text" id="costo" required><br>
+                <input type="text" id="costoP" required><br>
                 <br>
-                <button type="submit" class="btn btn-primary" id="agregar">Agregar</button>
-                <input type="text" id="demo" readonly>
+                <button type="submit" class="btn btn-primary" onclick="agregar()">Agregar</button>
                 <!-- <button type="submit" onclick="verificarA()">Verificar</button> -->
 
                 <!-- <button type="submit" id="agregar"><a href="agregar.html">agregar</a></button>
@@ -46,6 +45,7 @@
                 <button type="buscar" id="buscar"><a href="buscar.html">buscar</a></button> -->
             </form>
             <br>
+            <div id="salida"></div>
             <div>
                 <nav>
                     <div class="nav nav-tabs" id="nav-tab" role="tablist">
