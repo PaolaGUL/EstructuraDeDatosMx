@@ -51,9 +51,9 @@
                     <div class="nav nav-tabs" id="nav-tab" role="tablist">
                         <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button" role="tab" aria-controls="nav-profile" aria-selected="false">Modificar</button>
                         <button class="nav-link" id="nav-contact-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Eliminar</button>
-                        <button class="nav-link" id="nav-mostrar-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Mostrar Lista</button>
-                        <button class="nav-link" id="nav-inverso-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Lista Inversa</button>
-                        <button class="nav-link" id="nav-buscar-tab" data-bs-toggle="tab" data-bs-target="#nav-contact" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Buscar</button>
+                        <button class="nav-link" id="nav-mostrar-tab" data-bs-toggle="tab" data-bs-target="#nav-mostrar" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Mostrar Lista</button>
+                        <button class="nav-link" id="nav-inverso-tab" data-bs-toggle="tab" data-bs-target="#nav-inverso" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Lista Inversa</button>
+                        <button class="nav-link" id="nav-buscar-tab" data-bs-toggle="tab" data-bs-target="#nav-buscar" type="button" role="tab" aria-controls="nav-contact" aria-selected="false">Buscar</button>
                     </div>
                 </nav>
                 <div class="tab-content" id="nav-tabContent">
@@ -94,10 +94,14 @@
                         <p id="demo2">Respuesta</p>
                     </div>
                     <div class="tab-pane fade" id="nav-mostrar" role="tabpanel" aria-labelledby="nav-mostrar-tab" tabindex="0">
-                        <button type="button" onclick="mostrar()">Mostrar lista</button>
+                        <br>
+                        <button type="button" class="btn btn-primary" onclick="mostrar()">Mostrar lista</button>
                     </div>
-                    <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0">...</div>
-                    <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab" tabindex="0">...</div>
+                    <div class="tab-pane fade" id="nav-inverso" role="tabpanel" aria-labelledby="nav-inverso-tab" tabindex="0">
+                        <br>
+                        <button type="button" class="btn btn-primary" onclick="inverso()">Inverso lista</button>
+                    </div>
+                    <div class="tab-pane fade" id="nav-buscar" role="tabpanel" aria-labelledby="nav-buscar-tab" tabindex="0">...</div>
                 </div>
 
             </div>
