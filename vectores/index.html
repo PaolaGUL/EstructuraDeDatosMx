@@ -92,17 +92,28 @@
                             <br>
                             <button type="button" class="btn btn-primary" onclick="eliminar()">Eliminar</button>
                         </form>
-                        <p id="demo2">Respuesta</p>
+                        <div id="salidaE"></div>
                     </div>
                     <div class="tab-pane fade" id="nav-mostrar" role="tabpanel" aria-labelledby="nav-mostrar-tab" tabindex="0">
                         <br>
                         <button type="button" class="btn btn-primary" onclick="mostrar()">Mostrar lista</button>
+                        <br>
+                        <div id="salidaMo"></div>
                     </div>
                     <div class="tab-pane fade" id="nav-inverso" role="tabpanel" aria-labelledby="nav-inverso-tab" tabindex="0">
                         <br>
                         <button type="button" class="btn btn-primary" onclick="inverso()">Inverso lista</button>
+                        <br>
+                        <div id="salidaI"></div>
                     </div>
-                    <div class="tab-pane fade" id="nav-buscar" role="tabpanel" aria-labelledby="nav-buscar-tab" tabindex="0">...</div>
+                    <div class="tab-pane fade" id="nav-buscar" role="tabpanel" aria-labelledby="nav-buscar-tab" tabindex="0">
+                        <p>Puede ingresar el código del producto</p><br>
+                        <label for="codigoPro">Código Producto</label>
+                        <input type="text" id="codigoPro" required><br>
+                        <br>
+                        <button type="submit" class="btn btn-primary" onclick="buscar()">Buscar</button><br>
+                        <div id="salidaB"></div>
+                    </div>
                 </div>
 
             </div>

@@ -1,16 +1,18 @@
 window.onload = function() {
     //const agregar = document.getElementById('agregar');
     window.productos = [];
+
 }
 
 function agregar() {
+    //let codigo = document.getElementById('codigoP').value;
     let codigo = document.getElementById('codigoP').value;
-    productos.push(codigo);
     let nombre = document.getElementById('nombreP').value;
-    productos.push(nombre);
     let cantidad = document.getElementById('cantidadP').value;
-    productos.push(cantidad);
     let costo = document.getElementById('costoP').value;
+    productos.push(codigo);
+    productos.push(nombre);
+    productos.push(cantidad);
     productos.push(costo);
 
     let salida = document.getElementById('salida');
@@ -62,27 +64,54 @@ function modificar() {
 }
 
 function eliminar() {
-    let prob = [];
-    prob[0] = document.getElementById('codigoPro');
-    prob[0].parseInt();
-    producto[0].parseInt();
-    if (producto[0] == prob[0]) {
-        producto[1] = '';
-        producto[2] = '';
-        producto[3] = '';
-        document.getElementById('demo2').innerHTML = "Se ha eliminado correctamente";
-    } else {
-        document.getElementById('demo2').innerHTML = "No se encontro el producto";
+    let prob = document.getElementById('codigoPro');
+    if (codigo == prob) {
+        for (var i = 0; i <= productos.length(); i++) {
+            productos[i] = '';
+        }
+        let salidaE = document.getElementById('salidaE');
+        salidaE.innerHTML = '';
+        let resultadoE = document.createElement('p');
+        resultadoE.innerText = 'Se ha eliminado correctamente';
+
+        salidaE.appendChild(resultadoE);
     }
 }
 
 function mostrar() {
-    var p = document.createElement('p');
-    p = document.write(producto[0] + ' ' + producto[1] + ' ' + producto[2] + ' ' + producto[3]);
-    p.appendChild();
+    let salidaMo = document.getElementById('salidaMo').value;
+    salidaMo.innerText = '';
+
+    for (var i = 0; i <= 3; i++) {
+        let resultadoMo = document.createElement('p');
+        resultadoMo.innerText = productos[i];
+
+        salidaMo.appendChild(resultadoMo);
+    }
 
 }
 
 function inverso() {
-    document.writeln(producto[3] + ' ' + producto[2] + ' ' + producto[1] + ' ' + producto[0]);
+    let salidaI = document.getElementById('salidaI').value;
+    salidaI.innerText = '';
+
+    for (var i = 3; i >= 0; i++) {
+        let resultadoI = document.createElement('p');
+        resultadoI.innerText = productos[i];
+
+        salidaI.appendChild(resultadoI);
+    }
+}
+
+function buscar() {
+    let prob = document.getElementById('codigoPro').value;
+    if (codigo == prob) {
+        let salidaB = document.getElementById('salidaB').value;
+        salidaB.innerText = '';
+
+        let resultadoB = document.createElement('p');
+        resultadoB.innerText = "Se encontro el producto";
+
+        salidaB.appendChild(resultadob);
+    }
 }
