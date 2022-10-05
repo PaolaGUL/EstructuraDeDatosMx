@@ -1,0 +1,1 @@
+const inventario = document.createElement('div');
