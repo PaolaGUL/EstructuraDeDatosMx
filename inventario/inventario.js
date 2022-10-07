@@ -125,16 +125,55 @@ inventario.append(form);
 const contenido = document.getElementById('contenido');
 
 contenido.append(inventario);
-//donde tengo los productos
-class Producto {
-    constructor() {
-            this.codigo = document.getElementById('codigo');
-            this.nombre = document.getElementById('nombre');
-            this.cantidad = document.getElementById('cantidad');
-            this.costo = document.getElementById('costo');
-        }
-        // agregar(){
-        //     let aniadir = addEventListener('click', )
-        // }
+//donde tengo los productos, por el evento en lo botones
+let codigoP = document.getElementById('codigoP');
+let nombreP = document.getElementById('nombreP');
+let cantP = document.getElementById('cantP');
+let costoP = document.getElementById('costoP');
+
+const productosI = [codigoP, nombreP, cantP, costoP];
+
+function agregarP() {
+    productosI.push(codigoP, nombreP, cantP, costoP);
+    // let resultado = document.createElement('p');
+    // resultado.innerText = 'Se ha agregado correctamente';
+    if (productosI.length = !0) {
+        //botonA.append(resultado);
+        let resultado = document.writeln('Se ha agregado corretamente');
+    }
+    return resultado;
+}
+agregar.addEventListenner('click', agregarP());
+
+function ordenar() {
 
 }
+
+function buscar() {
+
+}
+
+function listar() {
+
+}
+
+function linstarInverso() {
+
+}
+/*function eliminar(codigoP) {
+    let resultado = document.createElement('p');
+    for (let i = 0; i <= productosI.length; i += 4) {
+        if (productosI[i] == codigoP) {
+            productosI[i] = '';
+            productosI[i + 1] = '';
+            productosI[i + 2] = '';
+            productosI[i + 3] = '';
+            resultado.innerText = 'Si existe';
+            botonE.append(resultado);
+        } else {
+            resultado.innerText = 'null';
+            botonE.append(resultado);
+        }
+    }
+}*/
+//eliminar.addEventListenner('click', eliminar());
