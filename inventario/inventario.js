@@ -145,12 +145,38 @@ function agregarP() {
 }
 agregar.addEventListenner('click', agregarP());
 
-function ordenar() {
-
+function ordenar(codigoP) {
+    for (let i = 0; i < productosI.length; i = +4) {
+        if (codigoP > 0) {
+            if ((codigoP - 1) < codigoP) {
+                productosI[i + 4] = codigoP;
+            }
+        } else {
+            productosI[0] = codigoP;
+        }
+    }
 }
 
-function buscar() {
+function buscar(codigoP) {
+    ordenar();
+    let mitad = productosI.length / 2;
+    if (codigoP < productosI.length) {
+        if (productosI[mitad] == codigoP) {
+            let resultado = document.createElement('p');
+            resultado.innerText = 'Se encontro el producto' + productosI[mitad + 1];
+        } else {
+            if (productosI[mitad] < codigoP) {
+                // se va hacia la izquierda
+                if (productosI[mitad + 4] == codigoP) {
+                    let resultado = document.createElement('p');
+                    resultado.innerText = 'Se encontro el producto' + productosI[mitad + 5];
+                }
 
+            } else {
+
+            }
+        }
+    }
 }
 
 function listar() {
