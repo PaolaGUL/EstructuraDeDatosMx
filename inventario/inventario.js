@@ -8,6 +8,21 @@ const inventario = document.createElement('div');
 // recuperar todos lista inversa
 
 const form = document.createElement('form');
+// tamaño del arreglo
+// let tamaniol = document.createElement('label');
+// tamaniol.innerText = 'Cantidad de productos que quiere ingresar';
+// let tamanio = document.createElement('input');
+// tamanio.id = 'tamanio';
+
+// form.append(tamaniol);
+// form.append(tamanio);
+
+
+let esp = document.createElement('br');
+let esp1 = document.createElement('br');
+
+form.append(esp);
+form.append(esp1);
 
 // Código
 let lcodigo = document.createElement('label');
@@ -132,16 +147,18 @@ let cantP = document.getElementById('cantP');
 let costoP = document.getElementById('costoP');
 
 const productosI = [codigoP, nombreP, cantP, costoP];
+let tamanioPro = document.getElementById('tamanio');
 
 function agregarP() {
+
     productosI.push(codigoP, nombreP, cantP, costoP);
     // let resultado = document.createElement('p');
     // resultado.innerText = 'Se ha agregado correctamente';
     if (productosI.length = !0) {
         //botonA.append(resultado);
         let resultado = document.writeln('Se ha agregado corretamente');
+        return resultado;
     }
-    return resultado;
 }
 agregar.addEventListenner('click', agregarP());
 
