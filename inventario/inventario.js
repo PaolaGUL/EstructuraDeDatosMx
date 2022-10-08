@@ -173,7 +173,11 @@ function buscar(codigoP) {
                 }
 
             } else {
-
+                // se va a la derecha
+                if (productosI[mitad] > codigoP) {
+                    let resultado = document.createElement('p');
+                    resultado.innerText = 'Se encontro el producto' + productosI[mitad - 5];
+                }
             }
         }
     }
