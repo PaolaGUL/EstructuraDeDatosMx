@@ -27,12 +27,12 @@ class Lista {
 
     }
     listarInverso() {
-        var inicio = this.primero;
+        var inicio = nuevo;
         var prev = null;
         var tempo = null;
-        while (this.primero != null) {
-            tempo = inicio.siguiente;
-            inicio.siguiente = prev;
+        while (nuevo !== null) {
+            tempo = inicio.next;
+            inicio.next = prev;
             prev = inicio;
             inicio = tempo;
         }
