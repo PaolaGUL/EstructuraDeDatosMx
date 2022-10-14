@@ -9,6 +9,7 @@ class Nodo {
 class Lista {
     constructor() {
         this.primero = null;
+        //this.tamanio = 0;
     }
     agregar(nuevo) {
         if (this.primero == null)
@@ -20,6 +21,23 @@ class Lista {
                 temp = temp.next;
             temp.next = nuevo;
         }
+        //this.tamanio++;
+    }
+    agregarInicio(nuevo) {
+
+    }
+    listarInverso() {
+        var inicio = this.primero;
+        var prev = null;
+        var tempo = null;
+        while (this.primero != null) {
+            tempo = inicio.siguiente;
+            inicio.siguiente = prev;
+            prev = inicio;
+            inicio = tempo;
+        }
+
+        return prev;
     }
 }
 
@@ -33,6 +51,6 @@ datos.agregar(num);
 num = new Nodo(5);
 datos.agregar(num);
 console.log(datos.listarInverso());
-num = new Nodo(1);
-datos.agregarInicio(num);
-console.log(datos.listarInverso());
+//num = new Nodo(1);
+//datos.agregarInicio(num);
+//sconsole.log(datos.listarInverso());
