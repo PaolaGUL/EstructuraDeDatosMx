@@ -12,31 +12,31 @@ class Lista {
         //this.tamanio = 0;
     }
     agregar(nuevo) {
-        if (this.primero == null)
-            this.primero = nuevo;
+            if (this.primero == null)
+                this.primero = nuevo;
 
-        else {
-            let temp = this.primero;
-            while (temp.next != null)
-                temp = temp.next;
-            temp.next = nuevo;
+            else {
+                let temp = this.primero;
+                while (temp.next != null)
+                    temp = temp.next;
+                temp.next = nuevo;
+            }
+            //this.tamanio++;
+            //return (temp.next);
         }
-        //this.tamanio++;
-    }
-    agregarInicio(nuevo) {
+        /*agregarInicio(nuevo) {
 
-    }
+        }*/
     listarInverso() {
-        var inicio = nuevo;
+        var inicio = this.primero;
         var prev = null;
         var tempo = null;
-        while (nuevo !== null) {
+        while (inicio !== null) {
             tempo = inicio.next;
             inicio.next = prev;
             prev = inicio;
             inicio = tempo;
         }
-
         return prev;
     }
 }
@@ -50,6 +50,7 @@ num = new Nodo(4);
 datos.agregar(num);
 num = new Nodo(5);
 datos.agregar(num);
+//console.log(datos);
 console.log(datos.listarInverso());
 //num = new Nodo(1);
 //datos.agregarInicio(num);
