@@ -42,7 +42,11 @@ class Lista {
         }
         // extraer el ultimo y devolver el ultimo 
     extraerUltimo() {
-
+        temp = this.primero;
+        var ultimo = null;
+        while (temp.next !== null) {
+            ultimo = temp.next;
+        }
     }
 }
 
