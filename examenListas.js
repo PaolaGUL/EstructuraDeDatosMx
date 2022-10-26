@@ -15,7 +15,7 @@ class Nodo {
     }
 }
 
-class lista {
+class Lista {
     constructor() {
         this.primero = null;
         this.posicion = posicion;
@@ -99,11 +99,46 @@ class lista {
          * pero de atras hacia adelante.
          */
     EliminarDeAtras(dato) {
+        let actual = this.num;
+        let despues = actual.next;
+
+        for (let i = 1; i <= this.tamanio; i++) {
+            let cont = 0;
+            if (dato === actual) {
+                cont++;
+                if (i === this.tamanio) {
+                    actual = despues;
+                    despues = null;
+                } else {
+                    actual = despues;
+                    despues = actual.next;
+                }
+            }
+        }
+        return actual;
+    }
+    Imprimir() {
         let actual = null;
-        let antes = this.num;
+        let despues = actual.next;
 
-        for (let i = this.tamanio; i >= 0; i--) {
-
+        for (let i = 1; i <= this.tamanio; i++) {
+            actual = despues;
+            despues = actual.next;
+            return actual;
         }
     }
 }
+
+let examen = new Lista();
+let num = new Nodo(leche, 1);
+datos.agregar(num);
+num = new Nodo(pan, 2);
+datos.agregar(num);
+num = new Nodo(refresco, 3);
+datos.agregar(num);
+num = new Nodo(carne, 4);
+datos.agregar(num);
+console.log(examen.Imprimir());
+num = new Nodo(pollo, 5);
+datos.agregarInicio(num);
+console.log(examen.Imprimir());
