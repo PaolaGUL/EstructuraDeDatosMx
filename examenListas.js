@@ -8,17 +8,18 @@
  */
 
 class Nodo {
-    constructor(text, num) {
-        this.num = num + ' ' + text;
+    constructor(num, text) {
+        this.num = num;
+        this.tex = text;
         this.next = null;
-        //this.dato = num +' '+ text;
+        //this.nuevo = num + ' ' + text;
     }
 }
 
 class Lista {
     constructor() {
         this.primero = null;
-        this.posicion = posicion;
+        // this.posicion = posicion;
         this.tamanio = 0;
     }
     agregar(nuevo) {
@@ -35,17 +36,17 @@ class Lista {
         //return (temp.next);
     }
     AgregarInicio(nuevo) {
-            var cabeza = this.num;
+            var cabeza = this.primero;
             var siguiente = cabeza.next;
             // var sigui = siguiente.next;
             var tempi = null;
             if (cabeza != null) {
                 tempi = siguiente;
                 siguiente = cabeza;
-                this.num = nuevo;
+                this.primero = nuevo;
             }
             this.tamanio++;
-            return cabeza;
+            return this.primero;
         }
         /** Extraer(posicion), recibira la posicion y va a eliminar
          * ese nodo, devolviendolo, consider que el primer
@@ -56,13 +57,17 @@ class Lista {
             if (posicion < 0 || posicion > this.tamanio) {
                 return null;
             } else {
-                let actual = this.num;
+                let actual = this.primero;
                 let antes = null;
                 for (let i = 1; i <= posicion; i++) {
-                    antes = actual;
-                    actual = actual.next;
+                    if (i === posicion) {
+                        antes = actual;
+                        actual = antes.next;
+                    } else {
+                        antes = actual;
+                        actual = actual.next;
+                    }
                 }
-                antes.next = actual.next;
                 this.tamanio--;
                 return antes;
             }
@@ -74,13 +79,15 @@ class Lista {
          * primer aparicion de cada dato buscado
          */
     Intercambia(dato1, dato2) {
-            let actual = this.num;
+            let actual = this.primero;
+            let siguiente = actual.next;
             let antes = null;
-            let temp = null;
+            //let temp = null;
 
             for (let i = 1; i <= this.tamanio; i++) {
                 antes = actual;
-                actual = actual.next;
+                actual = siguiente;
+                siguiente = actual.next;
                 if (antes != null) {
                     if (antes === dato1) {
                         antes = dato2;
@@ -99,7 +106,7 @@ class Lista {
          * pero de atras hacia adelante.
          */
     EliminarDeAtras(dato) {
-        let actual = this.num;
+        let actual = this.primero;
         let despues = actual.next;
 
         for (let i = 1; i <= this.tamanio; i++) {
@@ -119,26 +126,32 @@ class Lista {
     }
     Imprimir() {
         let actual = null;
-        let despues = actual.next;
+        let despues = this.primero;
 
         for (let i = 1; i <= this.tamanio; i++) {
             actual = despues;
-            despues = actual.next;
+            despues = despues.next;
             return actual;
         }
     }
 }
 
 let examen = new Lista();
-let num = new Nodo(leche, 1);
-datos.agregar(num);
-num = new Nodo(pan, 2);
-datos.agregar(num);
-num = new Nodo(refresco, 3);
-datos.agregar(num);
-num = new Nodo(carne, 4);
-datos.agregar(num);
+let num = new Nodo(1, 'leche');
+examen.agregar(num);
+num = new Nodo(2, 'pan');
+examen.agregar(num);
+num = new Nodo(3, 'refresco');
+examen.agregar(num);
+//num = new Nodo(4, 'carne');
+//examen.agregar(num);
 console.log(examen.Imprimir());
-num = new Nodo(pollo, 5);
-datos.agregarInicio(num);
-console.log(examen.Imprimir());
+num = new Nodo(5, 'pollo');
+examen.AgregarInicio(num);
+console.log(examen.AgregarInicio(num));
+examen.Extraer(1);
+console.log(examen.Imprimir())
+    //examen.Intercambia((1, 'leche'), (2, 'pan'));
+    //console.log(examen.Imprimir());
+examen.EliminarDeAtras((3, 'refresco'));
+console.log(examen.Imprimir())
